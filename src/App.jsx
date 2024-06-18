@@ -11,7 +11,9 @@ function App() {
     setTodos(data);
   }, []);
   useEffect(() => {
+    if(todos[0] != null){
     localStorage.setItem("todos", JSON.stringify(todos));
+    }
   }, [todos]);
 
   return (
