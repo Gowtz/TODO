@@ -1,7 +1,7 @@
 export default function List({ title }) {
   return (
     <>
-      <h1>{title}</h1>
+      <li className="bg-green-300 py-3 px-5 rounded mb-3">{title}</li>
     </>
   );
 }

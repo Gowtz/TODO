@@ -1,15 +1,16 @@
-import { useContext } from "react"
-import { TodoContext } from "./App"
-import List from "./List"
+import { useContext } from "react";
+import { TodoContext } from "./App";
+import List from "./List";
 export default function Lists() {
-    const [todos,setTodos] = useContext(TodoContext)
+  const [todos, setTodos] = useContext(TodoContext);
 
   return (
-  <>
- {
-    todos.map((todo,index)=>  <List key={index} title={todo.title}/>)
- } 
- 
-  </>
-  )
+    <>
+      <ul>
+        {Array.isArray(todos) &&  todos.map((todo, index) => (
+          <List key={index} title={todo.title} />
+        ))}
+      </ul>
+    </>
+  );
 }
